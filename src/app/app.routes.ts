@@ -7,7 +7,7 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/startpage/startpage').then(m => m.Startpage)
   },
   {
-    path: '/:id',
+    path: ':id',
     title: 'Detailpage',
     loadComponent: () => import('./pages/detailpage/detailpage').then(m => m.Detailpage)
   }
