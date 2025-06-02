@@ -7,8 +7,13 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/startpage/startpage').then(m => m.Startpage)
   },
   {
-    path: ':id',
+    path: 'place/:id',
     title: 'Detailpage',
     loadComponent: () => import('./pages/detailpage/detailpage').then(m => m.Detailpage)
-  }
+  },
+  {
+    path: 'add-place',
+    title: 'Add Place',
+    loadComponent: () => import('./pages/addplaces/addplaces').then(m => m.Addplaces)
+  },
 ];
