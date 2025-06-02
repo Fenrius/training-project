@@ -47,5 +47,32 @@ export class Startpage {
      },
      favorite: true
    },
+   {
+     id: 4,
+     image: {url:'my/super/image3.jpg', alt: 'my great image'},
+     title: 'My great place',
+     categories: ['category3'],
+     description: 'This is my great place',
+     location: {
+       text: 'My great location',
+       lat: 123,
+       lng: 456,
+     },
+     favorite: true
+   },
+   {
+     id: 5,
+     image: {url:'my/super/image3.jpg', alt: 'my great image'},
+     title: 'My great place',
+     categories: ['category3'],
+     description: 'This is my great place',
+     location: {
+       text: 'My great location',
+       lat: 123,
+       lng: 456,
+     },
+     favorite: true
+   },
+
  ]
 }
