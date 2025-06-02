@@ -1,1 +1,5 @@
-<p>startpage works!</p>
+<div class="cards-container">
+@for (place of placeData; track place.id) {
+  <app-card [placeData]="place"></app-card>
+}
+</div>

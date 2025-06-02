@@ -1,0 +1,24 @@
+<div class="card-wrapper">
+  <img [src]="placeData().image.url" [alt]="placeData().image.alt">
+
+  <div class="card-content">
+    <div class="card-title-fav">
+      <p>{{ placeData().title }}</p>
+      <button>{{ placeData().favorite }}</button>
+    </div>
+    <div class="card-location-categories">
+      @if (placeData().location.lat && placeData().location.lng) {
+        <p>{{placeData().location.lat}} - {{placeData().location.lng}}</p>
+      } @else {
+      <p>{{ placeData().location.text }}</p>
+      }
+      <div class="card-categories">
+        @for (category of placeData().categories; track $index) {
+          <p>{{ category }}</p>
+        }
+      </div>
+    </div>
+    <p>{{ placeData().description }}</p>
+  </div>
+
+</div>
