@@ -1,1 +1,9 @@
-<p>addplaces works!</p>
+<form [formGroup]="placeForm">
+  <input type="text" placeholder="title name" class="title-input" [formControl]="placeForm.controls.titleControl">
+  <input type="text" placeholder="image url" class="image-input" [formControl]="placeForm.controls.imageControl">
+  <input type="text" placeholder="cat 1" class="catone-input" [formControl]="placeForm.controls.categoryControl">
+  <input type="text" placeholder="Describe the place" class="description-input" [formControl]="placeForm.controls.descriptionControl">
+  <input type="text" placeholder="name location" class="location-input" [formControl]="placeForm.controls.locationControl">
+  <button type="submit" (click)="logValues()">Save</button>
+</form>
+
