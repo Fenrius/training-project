@@ -11,7 +11,16 @@ header {
   padding: 20px;
 }
 
-
 .grow {
   flex-grow: 1;
+}
+
+.home-link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.home-link:hover, .home-link:focus {
+  color: green;
 }
