@@ -1,1 +1,22 @@
-<p>detailpage works!</p>
+<div class="detail-wrapper">
+  @if (place()) {
+    <img [src]="place()?.image?.url" [alt]="place()?.image?.alt">
+    <div class="title-fav">
+      <h1>{{place()?.title}}</h1>
+      <button>{{place()?.favorite}}</button>
+    </div>
+    <div class="card-categories">
+      @if (place()?.location?.lat && place()?.location?.lng) {
+        <p>{{place()?.location?.lat}} - {{place()?.location?.lng}}</p>
+      } @else {
+        <p>{{ place()?.location?.text }}</p>
+      }
+      @for (category of place()?.categories; track $index) {
+        <p>{{ category }}</p>
+      }
+    </div>
+    <p>{{place()?.description}}</p>
+  } @else {
+    <p>No place was found!</p>
+  }
+</div>

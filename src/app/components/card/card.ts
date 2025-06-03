@@ -1,9 +1,12 @@
 import {Component, input} from '@angular/core';
 import {Place} from '../../interfaces/place';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-card',
-  imports: [],
+  imports: [
+    RouterLink
+  ],
   templateUrl: './card.html',
   styleUrl: './card.css'
 })
